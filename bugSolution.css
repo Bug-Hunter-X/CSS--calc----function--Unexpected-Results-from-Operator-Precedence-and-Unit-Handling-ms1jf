@@ -1,0 +1,23 @@
+/* Incorrect use of calc(), leading to unexpected layout */
+.element {
+  width: calc(50% - 10px);
+  /* Problem: 10px is subtracted from 50% before percentage is calculated, leading to unexpected results. */
+}
+
+/* Correct use of calc() with parentheses to ensure proper precedence */
+.element {
+  width: calc(50% - 10px);
+  /* Solution: Parentheses ensure that 10px is subtracted from the calculated 50% of the container width */
+}
+
+/* Incorrect unit handling */
+.element {
+  width: calc(50% + 10);
+  /* Problem: Missing unit for 10.  Should be 10px or 10em etc. */
+}
+
+/* Correct unit handling */
+.element {
+  width: calc(50% + 10px);
+  /* Solution:  Adding px (or other valid units) clarifies the intended unit for the 10 value. */
+}
