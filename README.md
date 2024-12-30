@@ -1,0 +1,1 @@
+This example demonstrates a common error when using the CSS `calc()` function. The issue stems from incorrect operator precedence and unit handling, leading to unexpected layout outcomes. The solution involves carefully using parentheses to control precedence and ensuring consistent unit usage.
